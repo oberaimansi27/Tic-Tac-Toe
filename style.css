@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container{
+    background: #14BDAC;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.title{
+    text-align: center;
+}
+
+.status-action {
+    font-family: 'Lucida Sans Regular';
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.status span{
+    color: black;
+}
+
+.reset {
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.reset:hover{
+    color:black
+}
+
+.game-grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*equally divides the available space into 3 columns (1fr is a relative unit)*/
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    background: white;
+}
+
+.game-cell{
+    height: 100px;
+    width: 100px;
+    background: #14BDAC;
+    cursor: pointer;
+    justify-content: center; /*align horizontally */
+    display: flex;
+    align-items: center; /* align vertically */
+}
+
+
+.x::before { /* describes the contents of the cell, there can be two types of pseudo elements, we can also use after instead of before*/
+    content: 'x';
+    font-size: 100px;
+    color: beige;
+}
+
+.o::before {
+    content: 'o';
+    font-size: 100px;
+    color: black;
+}
+
+.won::before {
+    color: red;
+}
